@@ -5,14 +5,20 @@
 // For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 // Note: for this kata y isn't considered a vowel.
 
-const str = "This website is for losers LOL!";
-const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-let response = '';
+const stri = "This website is for losers LOL!";
 
-for(let ind = 0; ind < str.length; ind++) {
+function removeVowels (str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  let response = '';
+
+  for(let ind = 0; ind < str.length; ind++) {
     if(!vowels.includes(str[ind])) {
-        response += str[ind];
+      response += str[ind];
     }
-}
+  }
+  return response;
+};
 
-console.log(response);
+module.exports = {
+  removeVowels,
+};
