@@ -2,6 +2,7 @@ const { removeVowels } = require('../desafios/001removeVowels');
 const { uniqueInOrder } = require('../desafios/002uniqueInOrder');
 const { findUniq } = require('../desafios/003findUniqueNumber');
 const { removeEveryOther } = require('../desafios/004RemovingElements');
+const { direction } = require('../desafios/005locateDirection');
 
 describe("Teste exercício 001", () => {
   it('Testa caso correto 1', () => {
@@ -69,5 +70,27 @@ describe("Teste exercício 004", () => {
   it('Testa caso correto 4', () => {
     const use04 = removeEveryOther([['Goodbye'], {'Great': 'Job'}]);
     expect(use04).toEqual([['Goodbye']]);
+  });
+});
+
+describe("Teste exercício 005", () => {
+  it('Testa caso correto 1', () => {
+    const use01 = direction("S", 180);
+    expect(use01).toEqual("N");
+  });
+
+  it('Testa caso correto 2', () => {
+    const use02 = direction("SE", -45);
+    expect(use02).toEqual("E");
+  });
+
+  it('Testa caso correto 3', () => {
+    const use03 = direction("W", 495);
+    expect(use03).toEqual("NE");
+  });
+
+  it('Testa caso correto 4', () => {
+    const use04 = direction("N", -450);
+    expect(use04).toEqual("W");
   });
 });
