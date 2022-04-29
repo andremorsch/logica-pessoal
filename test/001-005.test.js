@@ -1,6 +1,7 @@
 const { removeVowels } = require('../desafios/001removeVowels');
 const { uniqueInOrder } = require('../desafios/002uniqueInOrder');
 const { findUniq } = require('../desafios/003findUniqueNumber');
+const { removeEveryOther } = require('../desafios/004RemovingElements');
 
 describe("Teste exercício 001", () => {
   it('Testa caso correto 1', () => {
@@ -46,5 +47,27 @@ describe("Teste exercício 003", () => {
   it('Testa caso correto 5', () => {
     const use05 = findUniq([ 3, 10, 3, 3, 3 ]);
     expect(use05).toEqual(10);
+  });
+});
+
+describe("Teste exercício 004", () => {
+  it('Testa caso correto 1', () => {
+    const use01 = removeEveryOther(['Hello', 'Goodbye', 'Hello Again']);
+    expect(use01).toEqual(['Hello', 'Hello Again']);
+  });
+
+  it('Testa caso correto 2', () => {
+    const use02 = removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(use02).toEqual([1, 3, 5, 7, 9]);
+  });
+
+  it('Testa caso correto 3', () => {
+    const use03 = removeEveryOther([[1, 2]]);
+    expect(use03).toEqual([[1, 2]]);
+  });
+
+  it('Testa caso correto 4', () => {
+    const use04 = removeEveryOther([['Goodbye'], {'Great': 'Job'}]);
+    expect(use04).toEqual([['Goodbye']]);
   });
 });
