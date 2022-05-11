@@ -1,8 +1,8 @@
-const { removeVowels } = require('../desafios/001removeVowels');
-const { uniqueInOrder } = require('../desafios/002uniqueInOrder');
-const { findUniq } = require('../desafios/003findUniqueNumber');
-const { removeEveryOther } = require('../desafios/004RemovingElements');
-const { direction } = require('../desafios/005locateDirection');
+const { removeVowels } = require('../desafios/001-005/001removeVowels');
+const { uniqueInOrder } = require('../desafios/001-005/002uniqueInOrder');
+const { findUniq } = require('../desafios/001-005/003findUniqueNumber');
+const { removeEveryOther } = require('../desafios/001-005/004RemovingElements');
+const { direction } = require('../desafios/001-005/005locateDirection');
 
 describe("Teste exercício 001", () => {
   it('Testa caso correto 1', () => {
