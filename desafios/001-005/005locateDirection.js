@@ -29,7 +29,6 @@ function direction(facing, turn){
 
   return response;
 }
-console.log(direction("E", -855));
 
 module.exports = {
   direction,
